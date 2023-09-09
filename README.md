@@ -6,7 +6,7 @@ The Robot Framework is an open-source, keyword-driven test automation framework 
 2, https://robotframework.org/robotframework/#standard-libraries<br>
 3, https://robotframework.org/robotframework/latest/libraries/BuiltIn.html<br>
 
-# In this testing process, I have used the new Standard library named Dialogs, where I have used (Execute manual step.
+# In this testing process, I have used the new Standard library named Dialogs, where I have used (Execute manual step).
 To use <br>
 *** Settings ***<br>
 Library             Dialogs
@@ -25,6 +25,6 @@ We will see the popup window
 ![copy](https://github.com/shantosh123/Futta_oy/assets/75415500/d328e62e-bd22-48b6-ac0d-ca3bed2c6cc6)
 # This is an inbuilt library named Pause Execution ( it will popup the window and ask to continue the task) 
 # To use 
-Just write this command on your test cases
+Just write this command on your test cases <br>
 **pause execution**
 
