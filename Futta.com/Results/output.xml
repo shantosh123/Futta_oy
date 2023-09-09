@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0 (Python 3.9.12 on win32)" generated="20230909 17:31:00.949" rpa="false" schemaversion="3">
+<suite id="s1" name="Futta com" source="C:\development\robot-scripts\Futta.com\tests\Futta_com.robot">
+<test id="s1-t1" name="Should be able to open the web page" line="17">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>edge</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230909 17:31:01.257" level="INFO">Opening browser 'edge' to base url 'https://futta.fi/'.</msg>
+<status status="PASS" starttime="20230909 17:31:01.257" endtime="20230909 17:31:05.544"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230909 17:31:05.545" endtime="20230909 17:31:05.682"/>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>Moving &amp; Vehicle Rentals</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20230909 17:31:05.683" endtime="20230909 17:31:05.701"/>
+</kw>
+<kw name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20230909 17:31:05.702" endtime="20230909 17:31:07.912"/>
+</kw>
+<doc>This is the test case 1</doc>
+<tag>Test Case 1</tag>
+<status status="PASS" starttime="20230909 17:31:01.256" endtime="20230909 17:31:07.913"/>
+</test>
+<test id="s1-t2" name="Should be able to navigate get your transport quote" line="27">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>edge</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230909 17:31:07.919" level="INFO">Opening browser 'edge' to base url 'https://futta.fi/'.</msg>
+<status status="PASS" starttime="20230909 17:31:07.918" endtime="20230909 17:31:11.847"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230909 17:31:11.847" endtime="20230909 17:31:11.977"/>
+</kw>
+<kw name="Pause Execution" library="Dialogs">
+<doc>Pauses execution until user clicks ``Ok`` button.</doc>
+<status status="PASS" starttime="20230909 17:31:11.978" endtime="20230909 17:31:30.225"/>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>Get your transport quote</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20230909 17:31:30.226" endtime="20230909 17:31:30.262"/>
+</kw>
+<kw name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20230909 17:31:30.262" endtime="20230909 17:31:32.479"/>
+</kw>
+<doc>This is the test case 2</doc>
+<tag>Test Case 2</tag>
+<status status="PASS" starttime="20230909 17:31:07.917" endtime="20230909 17:31:32.480"/>
+</test>
+<test id="s1-t3" name="Should be able to open the browser as your choice" line="35">
+<kw name="Get Selection From User" library="Dialogs">
+<var>${new_browser}</var>
+<arg>Which Browser you want</arg>
+<arg>Chrome</arg>
+<arg>Edge</arg>
+<arg>firefox</arg>
+<doc>Pauses execution and asks user to select a value.</doc>
+<msg timestamp="20230909 17:31:39.452" level="INFO">${new_browser} = Edge</msg>
+<status status="PASS" starttime="20230909 17:31:32.484" endtime="20230909 17:31:39.452"/>
+</kw>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>${new_browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230909 17:31:39.453" level="INFO">Opening browser 'Edge' to base url 'https://futta.fi/'.</msg>
+<status status="PASS" starttime="20230909 17:31:39.452" endtime="20230909 17:31:43.430"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230909 17:31:43.431" endtime="20230909 17:31:43.573"/>
+</kw>
+<kw name="Pause Execution" library="Dialogs">
+<doc>Pauses execution until user clicks ``Ok`` button.</doc>
+<status status="PASS" starttime="20230909 17:31:43.573" endtime="20230909 17:31:46.300"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//*[@id="root"]/div[2]/div/div[2]/div[2]/form/div[1]/select</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230909 17:31:46.303" level="INFO">Clicking element 'xpath=//*[@id="root"]/div[2]/div/div[2]/div[2]/form/div[1]/select'.</msg>
+<status status="PASS" starttime="20230909 17:31:46.302" endtime="20230909 17:31:46.495"/>
+</kw>
+<kw name="Execute Manual Step" library="Dialogs">
+<arg>Did you choose right one?</arg>
+<arg>You din not choose right one!</arg>
+<doc>Pauses execution until user sets the keyword status.</doc>
+<status status="PASS" starttime="20230909 17:31:46.495" endtime="20230909 17:31:51.682"/>
+</kw>
+<doc>This is test case 3</doc>
+<tag>Test case 3</tag>
+<status status="PASS" starttime="20230909 17:31:32.483" endtime="20230909 17:31:51.682"/>
+</test>
+<doc>This the full test of futta oy</doc>
+<status status="PASS" starttime="20230909 17:31:00.951" endtime="20230909 17:31:51.685"/>
+</suite>
+<statistics>
+<total>
+<stat pass="3" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">Test Case 1</stat>
+<stat pass="1" fail="0" skip="0">Test Case 2</stat>
+<stat pass="1" fail="0" skip="0">Test case 3</stat>
+</tag>
+<suite>
+<stat pass="3" fail="0" skip="0" id="s1" name="Futta com">Futta com</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
